@@ -84,10 +84,12 @@ def q10
   foods = %w(いか たこ うに しゃけ うにぎり うに軍艦 うに丼)
 
   # 以下に回答を記載
-  foods.each do|food|
-    puts food.include?("うに")
-#色々調べのですがtrueとfalseを「大好きです」「まあまあ好きです」へ変更ができないです。
-#ヒントを頂けませんか？
+  foods.each do |food|
+    if food.include?("うに")
+      puts "好物です"
+    else
+      puts "まぁまぁ好きです"
+    end
   end
 end
 
@@ -95,7 +97,10 @@ def q11
   sports = ["サッカー", "バスケ", "野球", ["フットサル", "野球"], "水泳", "ハンドボール", ["卓球", "サッカー", "ボルダリング"]]
 
   # 以下に回答を記載
-
+puts "ユーザーの趣味一覧"
+sports.flatten.uniq.each.with_index(1) do |sport, i|
+  puts "No.#{i}: #{sport}"
+  end
 end
 
 def q12
