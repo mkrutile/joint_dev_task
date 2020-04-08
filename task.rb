@@ -75,14 +75,20 @@ def q9
   names = ["田中", "佐藤", "佐々木", "高橋"]
 
   # 以下に回答を記載
-
+  names.each.with_index(1) do |name, i|
+    puts "会員No.#{i}: #{name}さん"
+  end
 end
 
 def q10
   foods = %w(いか たこ うに しゃけ うにぎり うに軍艦 うに丼)
 
   # 以下に回答を記載
-
+  foods.each do|food|
+    puts food.include?("うに")
+#色々調べのですがtrueとfalseを「大好きです」「まあまあ好きです」へ変更ができないです。
+#ヒントを頂けませんか？
+  end
 end
 
 def q11
