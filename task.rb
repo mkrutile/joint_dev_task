@@ -234,15 +234,24 @@ def initialize(name:, entry_fee:)
      name = user.name
      age = user.age
 
-   case age
+  info_entry_fee = case age
      when 0..5
-     info_entry_fee = @entry_fee[:infant]
+     @entry_fee[:infant]
      when 6..12
-     info_entry_fee = @entry_fee[:children]
+     @entry_fee[:children]
      when 13..64
-     info_entry_fee = @entry_fee[:adult]
+     @entry_fee[:adult]
      when 65..120
-     info_entry_fee = @entry_fee[:senior]
+     @entry_fee[:senior]
+    #case age
+     #when 0..5
+     #info_entry_fee = @entry_fee[:infant]
+     #when 6..12
+     #info_entry_fee = @entry_fee[:children]
+     #when 13..64
+     #info_entry_fee = @entry_fee[:adult]
+     #when 65..120
+     #info_entry_fee = @entry_fee[:senior]
    end
 
      puts "#{name}さんの入場料金は#{info_entry_fee}円です。"
